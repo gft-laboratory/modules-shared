@@ -25,3 +25,21 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "enable_rotation" {
+  description = "Se habilita a rotação automática do segredo"
+  type        = bool
+  default     = false
+}
+
+variable "rotation_lambda_arn" {
+  description = "ARN da função Lambda que executa a rotação do segredo"
+  type        = string
+  default     = null
+}
+
+variable "automatically_after_days" {
+  description = "Número de dias entre rotações automáticas"
+  type        = number
+  default     = 30
+}

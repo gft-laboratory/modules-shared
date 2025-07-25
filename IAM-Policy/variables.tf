@@ -32,3 +32,9 @@ variable "role_attach_policy_managed_name" {
   description = "Nome da IAM Role à qual a policy será anexada"
   default     = null
 }
+
+variable "managed_policy_arns" {
+  description = "Lista de ARNs de policies gerenciadas para anexar à IAM Role"
+  type        = list(string)
+  default     = []
+}

@@ -8,6 +8,7 @@ locals {
 
 resource "aws_security_group" "custom_sg" {
 # checkov:skip=CKV_AWS_23: The description is created like variable to attach in each rule.
+# checkov:skip=CKV2_AWS_5: The security group is defined to be attached in other modules like Lambda, EC2, DMS etc.
 
   count = local.create && var.create_sg ? 1 : 0
 
