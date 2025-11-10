@@ -19,7 +19,7 @@ modules/
 
 ```hcl
 module "lambda_iam_role" {
-  source = "git::ssh://git@github.com/aws-sagemaker-project/module-shared-lake.git//modules/IAM-Role?ref=v0.0.7"
+  source = "git::ssh://git@github.com/SEU_ORG/SEU_REPO.git//modules/IAM-Role?ref=v0.0.7"
 
   name          = local.lambda_role_name
   tags_iam_role = local.lambda_tags
@@ -30,7 +30,7 @@ Para atachar uma policy criada via módulo na role criada é só utilizar o camp
 
 ```hcl
 module "lambda_policies_sagemaker" {
-  source = "git::ssh://git@github.com/aws-sagemaker-project/module-shared-lake.git//modules/IAM-Policy?ref=v0.0.7"
+  source = "git::ssh://git@github.com/SEU_ORG/SEU_REPO.git//modules/IAM-Policy?ref=v0.0.7"
 
   policy_name                      = "datalaker_custom_policy"
   policy_description               = "Custom policy to Sagemaker resources"
